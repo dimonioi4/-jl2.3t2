@@ -4,8 +4,18 @@ public class Main {
 
     long amount = 1000_60;
     boolean registered = true;
+    long expected = 30;
 
-    service.calculate(amount, registered);
+    // вызываем целевой метод:
+    long actual = service.calculate(amount, registered);
+
+    // производим проверку(сравниваем ОР и ФР)
+    // если true - PASS
+    // если false - FAIL
+    boolean passed = expected == actual;
+
+    // выводим результат
+    System.out.println(passed);
   }
 }
 
